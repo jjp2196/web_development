@@ -1,12 +1,10 @@
 # Pong Game
 
-This is a simple pong game written in Python. It uses the Pygame library to create the graphics and sounds.
+This is a simple pong game written in HTML, CSS, and JavaScript.
 
 ## Getting Started
 
-To run the game, you will need to have Python 3 installed. You can download Python from the [official website](https://www.python.org/downloads/).
-
-Once you have Python installed, you can clone the repository to your local machine.
+You can clone the repository to your local machine. From there, you can run the game. 
 
 ```
 git clone https://github.com/yourusername/pong-game.git
@@ -14,11 +12,9 @@ git clone https://github.com/yourusername/pong-game.git
 
 ## Running the Game
 
-To run the game, open a terminal window and navigate to the directory where you cloned the repository. Then, type the following command:
+To run the game, open a terminal window and navigate to the directory where you cloned the repository. 
 
-```
-python pong.py
-```
+Then, open the game.
 
 The game will start and you can begin playing.
 
