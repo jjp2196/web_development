@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+  }
+  
+  .game-board {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background-color: #333;
+    border: 2px solid #fff;
+  }
+  
+  .ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  .player-1, .player-2 {
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background-color: #fff;
+  }
+  
+  .player-1 {
+    left: 10px;
+  }
+  
+  .player-2 {
+    right: 10px;
+  }  
