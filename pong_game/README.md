@@ -7,7 +7,7 @@ This is a simple pong game written in HTML, CSS, and JavaScript.
 You can clone the repository to your local machine. From there, you can run the game. 
 
 ```
-git clone https://github.com/yourusername/pong-game.git
+git clone https://github.com/jjp2196/web_development/pong_game.git
 ```
 
 ## Running the Game
