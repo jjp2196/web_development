@@ -13,6 +13,9 @@ let ballSpeedX = 3 * (Math.random() > 0.5 ? 1 : -1); // Random initial direction
 let ballSpeedY = 3 * (Math.random() > 0.5 ? 1 : -1); // Random initial direction for the ball
 let mediumAISpeed = 2; // Medium-level AI speed
 
+// Define a variable to control paddle movement speed
+const paddleSpeed = 0.2;
+
 // Function to update the positions of paddles and ball
 function update() {
   // Update ball position
@@ -66,9 +69,16 @@ function update() {
 function handleControls(event) {
   // Player 1 controls
   if (event.key === "w" && player1Position > 0) {
-    player1Position -= 10;
+    player1Position -= paddleSpeed * (ballSpeedX > 0 ? 1 : -1);
   } else if (event.key === "s" && player1Position < gameBoard.clientHeight - 80) {
-    player1Position += 10;
+    player1Position += paddleSpeed * (ballSpeedX > 0 ? 1 : -1);
+  }
+
+  // Player 2 controls
+  if (event.key === "ArrowUp" && player2Position > 0) {
+    player2Position -= 10;
+  } else if (event.key === "ArrowDown" && player2Position < gameBoard.clientHeight - 80) {
+    player2Position += 10;
   }
 }
 

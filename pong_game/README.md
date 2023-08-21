@@ -38,4 +38,4 @@ The game ends when one player reaches 10 points. The winner is the player with t
 
 ## Conclusion
 
-This is a simple pong game that you can use to learn how to program games in Python. The game is easy to understand and the code is well-commented. I hope you enjoy playing the game!
+This is a simple pong game that you can use to learn how to program games in JavaScript. The game is easy to understand and the code is well-commented. I hope you enjoy playing the game!
