@@ -4,13 +4,14 @@ const player2 = document.querySelector(".player-2");
 const ball = document.querySelector(".ball");
 const gameBoard = document.querySelector(".game-board");
 
-// Set initial positions for the paddles and the ball
+// Set initial positions and variables
 let player1Position = 160;
 let player2Position = 160;
 let ballX = 390;
 let ballY = 190;
 let ballSpeedX = 3 * (Math.random() > 0.5 ? 1 : -1); // Random initial direction for the ball
 let ballSpeedY = 3 * (Math.random() > 0.5 ? 1 : -1); // Random initial direction for the ball
+let mediumAISpeed = 2; // Medium-level AI speed
 
 // Function to update the positions of paddles and ball
 function update() {
@@ -45,6 +46,18 @@ function update() {
   ball.style.left = ballX + "px";
   ball.style.top = ballY + "px";
 
+  // Medium-level AI for Player 2
+  if (ballSpeedX > 0) { // Ensure the ball is moving towards the AI paddle
+    const targetY = player2Position + 40;
+    
+    // Predict and intercept the ball's path
+    if (ballY < targetY && player2Position > 0) {
+      player2Position -= mediumAISpeed; // Move up
+    } else if (ballY > targetY && player2Position < gameBoard.clientHeight - 80) {
+      player2Position += mediumAISpeed; // Move down
+    }
+  }
+
   // Request next animation frame
   requestAnimationFrame(update);
 }
@@ -56,13 +69,6 @@ function handleControls(event) {
     player1Position -= 10;
   } else if (event.key === "s" && player1Position < gameBoard.clientHeight - 80) {
     player1Position += 10;
-  }
-
-  // Player 2 controls
-  if (event.key === "ArrowUp" && player2Position > 0) {
-    player2Position -= 10;
-  } else if (event.key === "ArrowDown" && player2Position < gameBoard.clientHeight - 80) {
-    player2Position += 10;
   }
 }
 
